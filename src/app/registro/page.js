@@ -5,12 +5,13 @@ import { useState } from "react";
 
 export default function RegisterPage() {
   const [email, setEmail] = useState();
-  const [pass, setPass] = useState();
+  const [password, setPassword] = useState();
   function handleFormSubmit(e) {
+    console.log('first')
     e.preventDefault();
     fetch("/api/registro", {
       method: "POST",
-      body: JSON.stringify({ email, pass }),
+      body: JSON.stringify({ email, password }),
       headers: { "Content-Type": "application/json" },
     });
   }
@@ -29,11 +30,11 @@ export default function RegisterPage() {
         />
         <input
           type="password"
-          name="pass"
-          id="pass"
+          name="password"
+          id="password"
           placeholder="password"
-          value={pass}
-          onChange={(e) => setPass(e.target.value)}
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
         />
         <button type="submit">Registrate</button>
         <p className="text-center text-gray-300 my-2">
