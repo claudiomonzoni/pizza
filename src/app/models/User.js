@@ -5,11 +5,11 @@ const UserSchema = new Schema({
   password: {
     type: String,
     required: true,
-    validate:pass => {
-      if(!pass?.length || pass.length < 5) {
-        new Error("Invalid password")
-      }
-    },
+    // validate:pass => {
+    //   if(!pass?.length || pass.length < 5) {
+    //     new Error("Invalid password")
+    //   }
+    // },
   },
 }, {timestamps: true});
 
