@@ -10,6 +10,7 @@ export default function RegisterPage() {
   const [error, setError] = useState(false);
   const [creadoUsuario, setCreandoUsuario] = useState(false);
   const [usuarioCreado, setUsuarioCreado] = useState(false);
+  
   async function handleFormSubmit(e) {
     e.preventDefault();
     setError(false)

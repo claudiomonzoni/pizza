@@ -1,4 +1,6 @@
+// logica para autentificar con nextauth si existe el usuario en mongo atlas
 import NextAuth from "next-auth/next";
+// proveedor de email desde la bd
 import CredentialsProvider from "next-auth/providers/credentials";
 const handler = NextAuth({
 
@@ -6,7 +8,6 @@ const handler = NextAuth({
         CredentialsProvider({
        
           name: "Credentials",
-
           credentials: {
             username: { label: "email", type: "email", placeholder: "nombre@correo.com" },
             password: { label: "Password", type: "password" }

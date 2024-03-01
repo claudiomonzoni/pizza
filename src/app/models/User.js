@@ -13,7 +13,9 @@ const UserSchema = new Schema({
     // },
   },
 }, {timestamps: true});
+
 UserSchema.post('validate', function(user){
+  // para hacer hash el password en la bd
   const notHashedPass = user.password
   const  salt = bcrypt.genSaltSync(10)
   user.password = bcrypt.hashSync(notHashedPass, salt)
