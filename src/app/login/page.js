@@ -31,7 +31,8 @@ export default function LoginPage() {
           placeholder="email"
           value={email}
           disabled={loginEnProgreso}
-        />
+          onChange={e => setEmail(e.target.value)}
+          />
         <input
           type="password"
           name="password"
@@ -39,6 +40,7 @@ export default function LoginPage() {
           placeholder="password"
           value={password}
           disabled={loginEnProgreso}
+          onChange={e => setPassword(e.target.value)}
         />
         <button type="submit">Login</button>
         <p className="text-center text-gray-300 my-2">

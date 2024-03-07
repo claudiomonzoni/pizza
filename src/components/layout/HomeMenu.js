@@ -8,7 +8,7 @@ export default function HomeMenu() {
         <div className="w-48 h-48 absolute left-0 top-0">
           <Image
             src={"/salad-izq.png"}
-            layout={"fill"}
+            fill
             objectFit={"contain"}
             alt={"Ensalada"}
             className="flex"
@@ -17,7 +17,7 @@ export default function HomeMenu() {
         <div className="w-48 h-48 absolute right-0 top-0">
           <Image
             src={"/salad-der.png"}
-            layout={"fill"}
+            fill
             objectFit={"contain"}
             alt={"Ensalada"}
             className="flex"
